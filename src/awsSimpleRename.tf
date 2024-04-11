@@ -1,11 +1,22 @@
 #################################
 ##			Variables		   ##
 #################################
-variable "access_key" {}
-variable "secret_key" {}
-variable "region" {}
-
-
+variable "access_key" {
+  type = string
+  description = "access key"
+  default = ""
+}
+variable "secret_key" {
+  type = string
+  description = "secret key"
+  default = ""
+  sensitive = true
+}
+variable "region" {
+  type = string
+  description = "region"
+  default = ""
+}
 #################################
 ##			Provider		   ##
 #################################
@@ -15,8 +26,7 @@ provider "aws" {
   access_key = "${var.access_key}"
   secret_key = "${var.secret_key}"
 }
-
-resource "aws_instance" "example" {
+resource "aws_instance" "ac-tf-testing" {
   ami           = "ami-0ebef2838fb2605b7"
   instance_type = "t2.micro"
 }

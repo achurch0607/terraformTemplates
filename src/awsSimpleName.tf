@@ -1,19 +1,7 @@
 #################################
 ##			Variables		   ##
 #################################
-variable "access_key" {
-  type = string
-  description = "access key"
-}
-variable "secret_key" {
-  type = string
-  description = "secret key"
-  sensitive = true
-}
-variable "region" {
-  type = string
-  description = "region"
-}
+
 #################################
 ##			Provider		   ##
 #################################

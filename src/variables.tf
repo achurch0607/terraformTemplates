@@ -24,7 +24,7 @@ variable "listeners" {
   default = [
     {
       protocol    = "HTTP"
-      port        = 80
+      port        = 80.5
       # ssl_cert_arn = "arn:aws:acm:us-east-1:123456789012:certificate/abcd1234-abcd-1234-abcd-123456789012"
     },
     {
